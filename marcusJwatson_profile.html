@@ -12,6 +12,8 @@
     <h1 class="name">Marcus Watson</h1>
     <div class="center"></div>
 
+    <div class="seeMore">See More</div>
+
 
     <div class="infobox">
         <div>Computer Science</div>
@@ -20,6 +22,29 @@
     </div>
 
     <img src="./meImg.png" class="myImg"/>
+
+
+
+    <script>
+        const wordBank = ["let", "var","const","global", "for(x in range(0,1))", "function foobar(){}"];
+
+        const center = document.getElementsByClassName('center')[0];
+        const particles = 30;
+
+        for (let i = 0; i < particles; i++) {
+            const randNum = Math.min(Math.floor(Math.random(wordBank.length) * 10), wordBank.length-1);
+            console.log(randNum)
+
+
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `-10%`;
+            particle.style.animationDelay = `${Math.random() * 5}s`;
+            particle.innerText = wordBank[randNum]
+            center.appendChild(particle);
+        }
+    </script>
 
 </body>
 </html>
