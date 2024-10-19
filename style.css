@@ -114,3 +114,19 @@ p{
         opacity: 0;
     }
 }
+
+.tags{
+    color:  white;
+    opacity: 75%;
+    position: absolute;
+    right: 2.5rem;
+    top: 5rem;
+
+}
+legend{
+    color: orange;
+}
+
+fieldset{
+    border-color: orange;
+}
